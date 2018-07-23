@@ -1,0 +1,15 @@
+* {font-family:"Palatino Linotype",Palatino,serif; font-size:1em; margin:0; padding:0;}
+
+.body {margin:0 auto; width:100%; max-width:60em;counter-reset:section subsection subsubsection;}
+
+.displaynone {display:none;}
+
+.title {}
+
+.text {font-size:20px; margin:20px auto; text-align:center;}
+
+.rule {border:solid 1px black; cursor:default; margin:5px auto; padding:5px 15px; width:200px;}
+.rule:hover {background-color:#eee;}
+.first {display:inline-block; float:left; text-align:right; width:40%;}
+.arrow {display:inline-block; text-align:center; width:20%;}
+.second	{display:inline-block; float:right; text-align:left; width:40%;}
