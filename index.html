@@ -1,0 +1,64 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./style.css" />
+<title>MU puzzle</title>
+<script>
+function rule1(){
+	var text = document.getElementById("text");
+	if (text.innerText[text.innerText.length-1] == "I") {
+		var x = text.innerText.substr(0,text.innerText.length-1);
+		text.innerText = x + "IU";
+	}
+};
+
+function rule2(){
+	var text = document.getElementById("text");
+	if (text.innerText[0] == "M") {
+		var x = text.innerText.substr(1,text.innerText.length);
+		text.innerText = "M" + x + x;
+	}
+};
+
+function rule3(){
+	var text = document.getElementById("text");
+	if (text.innerText.indexOf("III") > 0) {
+		var x = text.innerText.substr(0,text.innerText.indexOf("III"));
+		var y = text.innerText.substr(text.innerText.indexOf("III")+3,text.innerText.length);
+		text.innerText = x + "U" + y;
+	}
+};
+
+function rule4(){
+	var text = document.getElementById("text");
+	if (text.innerText.indexOf("UU") > 0) {
+		var x = text.innerText.substr(0,text.innerText.indexOf("UU"));
+		var y = text.innerText.substr(text.innerText.indexOf("UU")+2,text.innerText.length);
+		text.innerText = x + y;
+	}
+};
+</script>
+</head>
+<body class="body">
+<div class="text" id="text">MI</div>
+<div class="rule" onclick="rule1();">
+	<div class="first">xI</div>
+	<div class="arrow">&rarr;</div>
+	<div class="second">xIU</div>
+</div>
+<div class="rule" onclick="rule2();">
+	<div class="first">Mx</div>
+	<div class="arrow">&rarr;</div>
+	<div class="second">Mxx</div>
+</div>
+<div class="rule" onclick="rule3();">
+	<div class="first">xIIIy</div>
+	<div class="arrow">&rarr;</div>
+	<div class="second">xUy</div>
+</div>
+<div class="rule" onclick="rule4();">
+	<div class="first">xUUy</div>
+	<div class="arrow">&rarr;</div>
+	<div class="second">xy</div>
+</div>
+<div>
+</html>
